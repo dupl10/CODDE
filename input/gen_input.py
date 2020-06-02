@@ -42,7 +42,7 @@ if __name__ == '__main__':
     jsonInit = {"td-rhot":{
                     "inistate": 0,
                     "dt": 0.005,
-                    "ti":0.5,
+                    "ti":5.0,
                     "tf":5.0,
                     "pulse": {
                     "ampl":0.5,
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     arma.save(pdip,'inp_pdip.mat')
 
     bdip = np.zeros(4,dtype=float)
-    bdip.fill(0.0)
+    bdip.fill(1.0)
     arma.save(bdip,'inp_bdip.mat')
 
     with open('input.json','w') as f:
